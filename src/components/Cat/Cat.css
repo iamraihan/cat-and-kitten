@@ -1,0 +1,29 @@
+.card{
+    width: 300px;
+    border: 2px solid #ecf0f1;
+border-radius: 8px;
+padding: 10px;
+}
+.card-img{
+    text-align: center;
+}
+.card-img img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+.card button{
+padding: 10px 40px;
+border: none;
+border-radius: 8px;
+background-color: #bdc3c7;
+}
+.card button:hover{
+    background-color: #95a5a6;
+    color: #fff;
+}
+.icon{
+    padding-left: 10px;
+}

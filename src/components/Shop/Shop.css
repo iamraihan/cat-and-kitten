@@ -1,0 +1,12 @@
+.shop{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.cats-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+.cart-container{
+    background-color: #dfe6e9;
+}
