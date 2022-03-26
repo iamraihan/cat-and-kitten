@@ -21,6 +21,7 @@ border-radius: 8px;
 border: none;
 background-color: #3fb83f85;
 margin-left: 30px;
+cursor: pointer;
 }
 .shuffle-btn:hover{
     background-color: #498faa;

@@ -10,25 +10,31 @@ const Shop = () => {
     const [cats, setCats] = useState([])
     const [cart, setCart] = useState([])
     const [random, setRandom] = useState([])
+    // const [remove, setRemove] = useEffect([])
     // console.log(cart);
     useEffect(() => {
         fetch('cats.json')
             .then(res => res.json())
             .then(data => setCats(data))
     }, [])
+    // cart showing handler
     const cartHandler = (cat) => {
         const newCart = [...cart, cat]
         setCart(newCart)
         // console.log(cat);
 
     }
-
+    // making empty cart handler
     const emptyHandler = () => {
         setCart([])
         setRandom([])
-        console.log(cart);
+        // console.log(cart);
     }
-
+    // remove single item from cart handler
+    const removeHandler = (deleteItem) => {
+        let newItem = cart.filter(item => item !== deleteItem)
+        setCart(newItem)
+    }
     function getRandom() {
         const item = cart[Math.floor((Math.random() * cart.length))];
         if (!item) {
@@ -72,7 +78,7 @@ const Shop = () => {
                     random.map(item => <Random key={item.id} randomCat={item}></Random>)
                 }
                 {
-                    cart.map(item => <Cart key={item.id} cart={item}></Cart>)
+                    cart.map(item => <Cart key={item.id} cart={item} removeHandler={removeHandler}></Cart>)
                 }
 
 
