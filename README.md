@@ -1,10 +1,11 @@
-# Getting Started with Create React App
+## Cat And Kitten
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Live Website Link](https://cat-and-kitten.netlify.app/).
 
-## Available Scripts
+Click here to see live website: https://cat-and-kitten.netlify.app/
 
-In the project directory, you can run:
+
+
 
 ### `npm start`
 
