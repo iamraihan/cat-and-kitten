@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import Cat from '../Cat/Cat';
+import Qna from '../Qna/Qna';
 import Random from '../Random/Random';
 import './Shop.css'
 
@@ -61,6 +62,7 @@ const Shop = () => {
                 {
                     cats.map(cat => <Cat key={cat.id} cat={cat} cartHandler={cartHandler}></Cat>)
                 }
+                {/* <Qna></Qna> */}
             </div>
             <div className="cart-container">
 
