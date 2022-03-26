@@ -33,9 +33,9 @@ cursor: pointer;
 
 
 
-/* meadia  */
+/* meadia query for mobile devices  */
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:576px) {
     .cats-container{
         grid-template-columns: repeat(1, 1fr);
     }

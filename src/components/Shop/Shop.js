@@ -10,8 +10,6 @@ const Shop = () => {
     const [cats, setCats] = useState([])
     const [cart, setCart] = useState([])
     const [random, setRandom] = useState([])
-    // const [remove, setRemove] = useEffect([])
-    // console.log(cart);
     useEffect(() => {
         fetch('cats.json')
             .then(res => res.json())
@@ -19,9 +17,19 @@ const Shop = () => {
     }, [])
     // cart showing handler
     const cartHandler = (cat) => {
-        const newCart = [...cart, cat]
-        setCart(newCart)
-        // console.log(cat);
+
+
+        let newCart = [...cart, cat]
+
+
+        let newArr = newCart.filter((item, index) => newCart.indexOf(item) === index);
+        console.log(newArr)
+
+        if (newArr.length > 4) {
+            return alert('You have already added maximum item.')
+        }
+        setCart(newArr)
+
 
     }
     // making empty cart handler
@@ -36,13 +44,13 @@ const Shop = () => {
         setCart(newItem)
     }
     function getRandom() {
+
         const item = cart[Math.floor((Math.random() * cart.length))];
         if (!item) {
             return
         } else {
 
             setRandom([item])
-            // console.log(random);
         }
 
     }
@@ -55,24 +63,7 @@ const Shop = () => {
                 }
             </div>
             <div className="cart-container">
-                {/* {cart.map(cart => (
-                    <h1>{cart.name} </h1>
-                ))} */}
 
-                {/* {
-                    cart.map(cart => (
-
-                        <div className='side-bar'>
-
-
-                            <img src={cart.image} alt="" />
-                            <h2>{cart.name} </h2>
-                            < FontAwesomeIcon icon={faTrash} />
-
-                        </div>
-
-                    ))
-                } */}
 
                 {
                     random.map(item => <Random key={item.id} randomCat={item}></Random>)

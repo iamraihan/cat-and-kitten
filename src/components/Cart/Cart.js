@@ -12,7 +12,6 @@ const Cart = ({ cart, removeHandler }) => {
                 <img src={image} alt="" />
                 <h2>{name}</h2>
                 <button onClick={() => removeHandler(cart)}><FontAwesomeIcon icon={faTrash} /></button>
-                {/* < FontAwesomeIcon icon={faTrash} /> */}
 
             </div>}
         </div>
