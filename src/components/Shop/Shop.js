@@ -23,10 +23,22 @@ const Shop = () => {
 
     }
 
+    const emptyHandler = () => {
+        setCart([])
+        setRandom([])
+        console.log(cart);
+    }
+
     function getRandom() {
         const item = cart[Math.floor((Math.random() * cart.length))];
-        setRandom([item])
-        console.log(random);
+        if (!item) {
+            return
+        } else {
+
+            setRandom([item])
+            // console.log(random);
+        }
+
     }
     return (
         <div className='shop'>
@@ -65,7 +77,7 @@ const Shop = () => {
 
 
                 <button onClick={getRandom} className='shuffle-btn'>Choose One For Me <FontAwesomeIcon icon={faShuffle} /></button>
-                <button className='shuffle-btn'>Choose Again </button>
+                <button onClick={emptyHandler} className='shuffle-btn'>Choose Again </button>
             </div>
         </div>
     );
