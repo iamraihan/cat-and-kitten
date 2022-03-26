@@ -1,0 +1,23 @@
+.random-cat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    border-radius: 8px;
+    margin: 0 auto;
+    margin-top: 20px;
+
+
+}
+
+.random-cat img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.random-cat h2{
+    margin-bottom: 0;
+}

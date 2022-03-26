@@ -11,3 +11,31 @@
 .cart-container{
     background-color: #dfe6e9;
 }
+
+.shuffle-btn{
+padding: 10px 50px;
+font-size: 16px;
+margin-top: 20px;
+outline: none;
+border-radius: 8px;
+border: none;
+background-color: #3fb83f85;
+margin-left: 30px;
+}
+.shuffle-btn:hover{
+    background-color: #498faa;
+    color: #fff;
+}
+
+
+
+
+
+
+/* meadia  */
+
+@media screen and (max-width:768px) {
+    .cats-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
