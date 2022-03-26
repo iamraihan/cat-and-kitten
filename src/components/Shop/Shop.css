@@ -36,7 +36,11 @@ cursor: pointer;
 /* meadia query for mobile devices  */
 
 @media screen and (max-width:576px) {
+    .shop{
+        grid-template-columns: 1fr;
+    }
     .cats-container{
         grid-template-columns: repeat(1, 1fr);
+        flex-direction: column;
     }
 }
